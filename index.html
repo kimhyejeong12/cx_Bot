@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-g">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniBalloons CX Bot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-bg': '#FDF2F8', // Pastel Pink (lightest)
+                        'brand-surface': '#F0F9FF', // Pastel Sky Blue (lightest)
+                        'brand-primary': '#BFDBFE', // Sky Blue
+                        'brand-secondary': '#FBCFE8', // Pastel Pink
+                        'brand-text': '#1F2937', // Dark Gray for readability
+                        'brand-subtle': '#6B7281', // Medium Gray for subtle text
+                    },
+                    keyframes: {
+                        pulseStrong: {
+                            '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+                            '50%': { transform: 'scale(1.02)', opacity: '0.9' },
+                        },
+                        bounceGentle: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-3px)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0.5' },
+                            '100%': { opacity: '1' },
+                        },
+                        shiver: {
+                            '0%, 100%': { transform: 'translateX(0)' },
+                            '10%, 30%, 50%, 70%, 90%': { transform: 'translateX(-2px)' },
+                            '20%, 40%, 60%, 80%': { transform: 'translateX(2px)' },
+                        },
+                        glow: {
+                            '0%, 100%': { boxShadow: '0 0 5px rgba(59, 130, 246, 0.2)' },
+                            '50%': { boxShadow: '0 0 15px rgba(59, 130, 246, 0.4)' },
+                        },
+                        pop: {
+                            '0%': { transform: 'scale(0.95)', opacity: '0.8' },
+                            '50%': { transform: 'scale(1.05)', opacity: '1' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                    },
+                    animation: {
+                        pulseStrong: 'pulseStrong 1.5s ease-in-out infinite',
+                        bounceGentle: 'bounceGentle 2s ease-in-out infinite',
+                        fadeIn: 'fadeIn 1s ease-in-out',
+                        shiver: 'shiver 0.5s ease-in-out',
+                        glow: 'glow 2.5s ease-in-out infinite',
+                        pop: 'pop 0.5s ease-out',
+                    },
+                },
+            },
+        };
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0"
+  }
+}
+</script>
+</head>
+<body class="bg-brand-bg">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "cx_Bot",
+  "description": "An empathetic customer support chatbot for gaming and entertainment users. It recognizes user emotions (Joy, Anger, Sadness, etc.), visualizes them with animated chat bubbles (AniBalloons), and responds with a tailored tone of empathy, warmth, and humor to enhance user satisfaction.",
+  "requestFramePermissions": []
+}
